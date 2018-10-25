@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+  backupGlobals="false"
+  backupStaticAttributes="false"
+  colors="true"
+  verbose="true"
+  convertErrorsToExceptions="true"
+  convertNoticesToExceptions="true"
+  convertWarningsToExceptions="true"
+  processIsolation="false"
+  stopOnFailure="false">
+  <testsuites>
+    <testsuite name="unit">
+      <directory suffix="Test.php">tests/</directory>
+    </testsuite>
+  </testsuites>
+  <filter>
+    <whitelist>
+      <directory suffix=".php">src/</directory>
+    </whitelist>
+  </filter>
+  <logging>
+    <log type="tap" target="build/report.tap"/>
+    <log type="junit" target="build/report.junit.xml"/>
+    <log type="coverage-html" target="build/coverage"/>
+    <log type="coverage-text" target="build/coverage.txt"/>
+    <log type="coverage-clover" target="build/logs/clover.xml"/>
+  </logging>
+  <php>
+    <env name="NEW_TOKEN" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6Ijk2OGEyODI2LTMxNTUtNDUyOC1iOTgxLWE1OGYzMjhjNzk2YSJ9.eyJpc3MiOiJhcGkuYnVzaW5lc3MubWVtZWQuY29tLmJyIiwiYXVkIjoibWVtZWQuY29tLmJyIiwianRpIjoiOTY4YTI4MjYtMzE1NS00NTI4LWI5ODEtYTU4ZjMyOGM3OTZhIiwiaWF0IjoxNTM5MTI5NjAwLCJuYmYiOjE1MTk4Mjc0OTUsImV4cCI6MTUxOTgzMTAzNSwiMCI6MSwiMSI6IjExMzFlM2ViNzIwOTk5MWM4YjY5YThkMjMxY2VlMTkyIiwiMiI6IjIwMTgtMTAtMTAiLCIzIjoic291cmNlIn0.zTXYCJ00XNoAc1BPl8R5P0qKHMNTA4XNHRXIo1xh1Us" />
+    <env name="OLD_TOKEN" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.WyI3NDUiLCIzZTlmZjQyYzUyYjQ1ZTVkM2Q0M2NhOTMwOGM5ZjY5YiIsIjIwMTYtMDUtMTAiLCJ1bmRlZmluZWQiXQ.MmnvrVRYgy4v9LPMNTKhe7Jq7vWV540DyGlz-6S5-TI" />
+    <env name="JWT_KEY" value="QhcyEkdha2eGFFygQhcyEkdha2eGFFyg" />
+    <env name="TEST_KEY" value="4f1g23a12aa" />
+    <env name="OTHER_TOKEN" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6IjRmMWcyM2ExMmFhIn0.eyJpc3MiOiJodHRwOlwvXC9leGFtcGxlLmNvbSIsImF1ZCI6Imh0dHA6XC9cL2V4YW1wbGUub3JnIiwianRpIjoiNGYxZzIzYTEyYWEiLCJpYXQiOjE1MTk5MzgxOTIsIm5iZiI6MTUxOTkzODE5MiwiZXhwIjoxNTE5OTM4MTkyLCJ1aWQiOjF9.lHt479GP5BI6RU1tOjWeW4lLEdUAnNh9EMsdiYN9bFk" />
+    <env name="FUTURE_TOKEN" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6IjRmMWcyM2ExMmFhIn0.eyJpc3MiOiJodHRwOlwvXC9leGFtcGxlLmNvbSIsImF1ZCI6Imh0dHA6XC9cL2V4YW1wbGUub3JnIiwianRpIjoiNGYxZzIzYTEyYWEiLCJpYXQiOjE1MTk5MzgzODAsIm5iZiI6MTUxOTkzODM4MCwiZXhwIjoxNTI5OTM4MzgwLCJ1aWQiOjF9.CV6JOk2y9yjbwUe5bgnzI-_jKgV_AHAYEO8etyafUm0" />
+  </php>
+</phpunit>
