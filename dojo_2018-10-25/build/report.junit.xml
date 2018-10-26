@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="unit" tests="7" assertions="7" errors="0" failures="0" skipped="0" time="0.164304">
+    <testsuite name="AppTest" file="/var/www/memed/dojo/tests/AppTest.php" tests="7" assertions="7" errors="0" failures="0" skipped="0" time="0.164304">
+      <testcase name="testEmpty" class="AppTest" classname="AppTest" file="/var/www/memed/dojo/tests/AppTest.php" line="20" assertions="1" time="0.164062"/>
+      <testcase name="test1" class="AppTest" classname="AppTest" file="/var/www/memed/dojo/tests/AppTest.php" line="25" assertions="1" time="0.000063"/>
+      <testcase name="test2" class="AppTest" classname="AppTest" file="/var/www/memed/dojo/tests/AppTest.php" line="30" assertions="1" time="0.000046"/>
+      <testcase name="test3" class="AppTest" classname="AppTest" file="/var/www/memed/dojo/tests/AppTest.php" line="35" assertions="1" time="0.000033"/>
+      <testcase name="test2x2toEmpty" class="AppTest" classname="AppTest" file="/var/www/memed/dojo/tests/AppTest.php" line="40" assertions="1" time="0.000035"/>
+      <testcase name="test2x2toFull" class="AppTest" classname="AppTest" file="/var/www/memed/dojo/tests/AppTest.php" line="48" assertions="1" time="0.000031"/>
+      <testcase name="test2x3toEmpty" class="AppTest" classname="AppTest" file="/var/www/memed/dojo/tests/AppTest.php" line="56" assertions="1" time="0.000034"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
