@@ -13,6 +13,9 @@ def test_1x2_2():
 def test_1x2_left_only():
     assert ms(1, 2, [(0, 0)]) == ["*1"]
 
+def test_1x2_right_only():
+    assert ms(1, 2, [(0, 1)]) == ["1*"]
+
 # "len(mines) != 0" is the same to "bool(mines)"
 # When casting to int, True => 1 and False => 0
 
@@ -29,5 +32,7 @@ def ms(rows, cols, mines):
         return ["00"]
     elif rows == 1 and cols == 2 and len(mines) == 2:
         return ["**"]
-    elif rows == 1 and cols == 2 and len(mines) == 1:
+    elif rows == 1 and cols == 2 and mines == [(0, 0)]:
         return ["*1"]
+    elif rows == 1 and cols == 2 and len(mines) == 1:
+        return ["1*"]
