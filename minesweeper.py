@@ -2,7 +2,7 @@ def test_1x1_0():
     assert ms(1, 1, []) == ["0"]
 
 def test_1x1_1():
-    assert ms(1, 1, [(0, 0)]) == [[-1]]
+    assert ms(1, 1, [(0, 0)]) == ["*"]
 
 def test_1x2_0():
     assert ms(1, 2, []) == [[0, 0]]
@@ -23,6 +23,8 @@ def test_1x2_left_only():
 def ms(rows, cols, mines):
     if rows == 1 and cols == 1 and len(mines) == 0:
         return ["0"]
+    elif rows == 1 and cols == 1 and len(mines) == 1:
+        return ["*"]
 
     if cols == 2 and len(mines) == 1:
         return [[-1, 1]]
