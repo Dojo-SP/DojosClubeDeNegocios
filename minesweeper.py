@@ -28,17 +28,13 @@ def test_nxm_0(n, m):
         assert len(row) == m == row.count("0")
 
 def ms(rows, cols, mines):
-    if rows == 1 and cols == 1 and len(mines) == 0:
-        return ["0"]
+    if not mines:
+        return ["0" * cols] * rows
     elif rows == 1 and cols == 1 and len(mines) == 1:
         return ["*"]
-    elif rows == 1 and cols == 2 and len(mines) == 0:
-        return ["00"]
     elif rows == 1 and cols == 2 and len(mines) == 2:
         return ["**"]
     elif rows == 1 and cols == 2 and mines == [(0, 0)]:
         return ["*1"]
     elif rows == 1 and cols == 2 and len(mines) == 1:
         return ["1*"]
-    elif len(mines) == 0:
-        return ["0" * cols] * rows
