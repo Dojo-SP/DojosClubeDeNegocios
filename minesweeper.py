@@ -1,3 +1,5 @@
+import pytest
+
 def test_1x1_0():
     assert ms(1, 1, []) == ["0"]
 
@@ -16,12 +18,14 @@ def test_1x2_left_only():
 def test_1x2_right_only():
     assert ms(1, 2, [(0, 1)]) == ["1*"]
 
-# "len(mines) != 0" is the same to "bool(mines)"
-# When casting to int, True => 1 and False => 0
-
-
-#["*1",
-# "11"]
+@pytest.mark.parametrize('n, m', [
+    (2, 2), (5, 10), (7, 3), (1, 5), (19, 27),
+])
+def test_nxm_0(n, m):
+    result = ms(n, m, [])
+    assert len(result) == n
+    for row in result:
+        assert len(row) == m == row.count("0")
 
 def ms(rows, cols, mines):
     if rows == 1 and cols == 1 and len(mines) == 0:
@@ -36,3 +40,5 @@ def ms(rows, cols, mines):
         return ["*1"]
     elif rows == 1 and cols == 2 and len(mines) == 1:
         return ["1*"]
+    elif len(mines) == 0:
+        return ["0" * cols] * rows
