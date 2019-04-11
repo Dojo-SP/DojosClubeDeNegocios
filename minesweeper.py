@@ -27,6 +27,21 @@ def test_nxm_0(n, m):
     for row in result:
         assert len(row) == m == row.count("0")
 
+@pytest.mark.parametrize(("n", "m"), [
+    (2, 2), (2, 3)
+])
+def test_nxm_1_top_left(n, m):
+    result = ms(n, m, [(0, 0)])
+    assert len(result) == n
+    assert "".join(result).count("0") == (n*m)-4
+    for i, row in enumerate(result):
+        if i == 0:
+            assert row[:2] == "*1"
+            assert row[2:] == "0" * (m-2)
+        elif i == 1:
+            assert row[:2] == "11"
+        assert len(row) == m
+
 def ms(rows, cols, mines):
     if not mines:
         return ["0" * cols] * rows
@@ -38,3 +53,7 @@ def ms(rows, cols, mines):
         return ["*1"]
     elif rows == 1 and cols == 2 and len(mines) == 1:
         return ["1*"]
+    elif rows == 2 and cols == 2 and len(mines) == 1:
+        return ["*1", "11"]
+    else:
+        return ["*10", "110"]
