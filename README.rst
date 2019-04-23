@@ -75,3 +75,10 @@ Repositório com o código dos dojos realizados no *coworking*
     - `pytest <https://pytest.org/>`_
     - `Trip <https://www.spoj.com/problems/TRIP/>`_
     - `MeetUp <https://www.meetup.com/pt-BR/Dojo-SP/events/259044851/>`_
+
+  * - 10
+    - `2019-04-10 <dojo_2019-04-10/>`_
+    - Python
+    - `pytest <https://pytest.org/>`_
+    - `Campo Minado <http://dojopuzzles.com/problemas/exibe/campo-minado/>`_
+    - `MeetUp <https://www.meetup.com/pt-BR/Dojo-SP/events/260017254/>`_
